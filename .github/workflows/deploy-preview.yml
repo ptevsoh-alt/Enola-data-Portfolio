@@ -11,6 +11,8 @@ on:
         type: string
         default: "096c39e6ac7877af8141d865917c8da3b891c7c9"
 
+# GitHub Pages project site is served from the repository-name path:
+# https://ptevsoh-alt.github.io/Enola-data-Portfolio/
 permissions:
   contents: read
   pages: write
