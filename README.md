@@ -12,4 +12,6 @@ This repository hosts an isolated GitHub Pages preview of the portfolio website 
 
 Open **Actions → Deploy portfolio preview → Run workflow** and provide a source branch, tag, or commit SHA in the `source_ref` input. The workflow checks out that exact source ref, runs `npm ci` and `npm test`, then publishes only the source repository's `site/` directory to GitHub Pages.
 
+## Public preview safety
+
 The preview is public. Do not put private, confidential, credential, or non-consented personal information in the source site's public assets.
