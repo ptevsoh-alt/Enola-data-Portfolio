@@ -9,7 +9,7 @@ on:
         description: "Source branch, tag, or commit SHA from ptevsoh-alt/Enola-data"
         required: false
         type: string
-        default: "e7961a961055399075d564c70a07e50bb2e9c152"
+        default: "1e6360eb278d5267be5e9fa7dd4b59f2befbae20"
 
 # GitHub Pages project site is served from the repository-name path:
 # https://ptevsoh-alt.github.io/Enola-data-Portfolio/
@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ptevsoh-alt/Enola-data
-          ref: ${{ inputs.source_ref || 'e7961a961055399075d564c70a07e50bb2e9c152' }}
+          ref: ${{ inputs.source_ref || '1e6360eb278d5267be5e9fa7dd4b59f2befbae20' }}
           path: source
           persist-credentials: false
 
