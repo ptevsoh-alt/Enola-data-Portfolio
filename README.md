@@ -5,7 +5,7 @@ This repository hosts an isolated GitHub Pages preview of the portfolio website 
 - Preview site: https://ptevsoh-alt.github.io/Enola-data-Portfolio/
 - Independent review room: https://ptevsoh-alt.github.io/Enola-data-Portfolio/review/
 - Source repository: https://github.com/ptevsoh-alt/Enola-data
-- Source ref currently pinned: `88b4fd62a1fdd796ed56316ebc4b5d0405367cda`
+- Source ref currently pinned: `cfc872586d001753e35130c56fc77011f0efb277`
 - This preview repository is separate from the source repository. The source repository and its `main` branch are not modified by this deployment.
 
 ## Update the preview
