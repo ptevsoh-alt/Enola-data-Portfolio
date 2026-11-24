@@ -9,7 +9,7 @@ on:
         description: "Source branch, tag, or commit SHA from ptevsoh-alt/Enola-data"
         required: false
         type: string
-        default: "8ca63afc6348d42e65875e1e4f2d7dde4063f263"
+        default: "ccf6d644a2e5a68d8b327e6a560df1699dc81e73"
 
 # GitHub Pages project site is served from the repository-name path:
 # https://ptevsoh-alt.github.io/Enola-data-Portfolio/
@@ -19,7 +19,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: portfolio-preview-pages-visual-v2
+  group: portfolio-preview-pages-visual-v3
   cancel-in-progress: false
 
 jobs:
@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ptevsoh-alt/Enola-data
-          ref: ${{ inputs.source_ref || '8ca63afc6348d42e65875e1e4f2d7dde4063f263' }}
+          ref: ${{ inputs.source_ref || 'ccf6d644a2e5a68d8b327e6a560df1699dc81e73' }}
           path: source
           persist-credentials: false
 
@@ -52,6 +52,12 @@ jobs:
           test -f site/index.html
           test -f site/review/index.html
           test -f site/.nojekyll
+
+      - name: Install CJK fonts for accurate Chinese layout validation
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-cjk
+          fc-cache -f
 
       - name: Render portfolio in real Chrome (desktop/mobile)
         timeout-minutes: 4
