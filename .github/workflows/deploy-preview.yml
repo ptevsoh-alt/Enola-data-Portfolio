@@ -9,7 +9,7 @@ on:
         description: "Source branch, tag, or commit SHA from ptevsoh-alt/Enola-data"
         required: false
         type: string
-        default: "6f570e2b9f15394475a0d1e4c289a0f167a9ded5"
+        default: "b71aac9aefe2b444aedcecaf2875477139312335"
 
 # GitHub Pages project site is served from the repository-name path:
 # https://ptevsoh-alt.github.io/Enola-data-Portfolio/
@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ptevsoh-alt/Enola-data
-          ref: ${{ inputs.source_ref || '6f570e2b9f15394475a0d1e4c289a0f167a9ded5' }}
+          ref: ${{ inputs.source_ref || 'b71aac9aefe2b444aedcecaf2875477139312335' }}
           path: source
           persist-credentials: false
 
@@ -52,6 +52,20 @@ jobs:
           test -f site/index.html
           test -f site/review/index.html
           test -f site/.nojekyll
+
+      - name: Render portfolio in real Chrome (desktop/mobile)
+        working-directory: source
+        run: |
+          google-chrome --version || chromium --version
+          node scripts/site-visual-audit.cjs
+
+      - name: Archive visual QA metrics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-visual-qa
+          path: source/qa/live-visual-audit.json
+          if-no-files-found: warn
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
