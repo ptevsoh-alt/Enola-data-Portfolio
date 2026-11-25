@@ -9,6 +9,18 @@ This repository publishes the public GitHub Pages portfolio from the validated s
 - Consolidated source PRs: [#31](https://github.com/ptevsoh-alt/Enola-data/pull/31) (recruiter copy / source CI), [#28](https://github.com/ptevsoh-alt/Enola-data/pull/28), [#29](https://github.com/ptevsoh-alt/Enola-data/pull/29) and [#30](https://github.com/ptevsoh-alt/Enola-data/pull/30)
 - M3 employer review: https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/gtm-positioning-decision
 
+## Public review preview — PR #32 (not merged)
+
+A separate, **noindex** review copy of [Brand PR / Campaign creative and management PR #32](https://github.com/ptevsoh-alt/Enola-data/pull/32) is available at:
+
+- [Preview portfolio home](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/)
+- [Brand PR / Partnerships case](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/#/case/brand/pr-project)
+- [Campaign Creative Adaptation / Management](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/#/case/gtm/campaign-architecture)
+
+The root portfolio still uses validated source commit `7c554849b3a5b7b6736c01d885497adba407187b`; the review copy is built from PR #32 commit `4f920656c4edfa37c8ddc415624e082831d8ec51`. Both are copied independently into one Pages artifact, with the preview assets and routes kept under `/preview/pr32/`. Passing CI and deployment do **not** merge the source Draft PR.
+
+Before Pages upload, the workflow tests both sources, runs Chrome QA (desktop/mobile) and checks the nested public URL path and asset integrity. Preview HTML is marked `noindex,nofollow`; the URL is publicly reachable and should not contain private information.
+
 ## Deployment
 
 Pushes to this repository's `main` run `.github/workflows/deploy-preview.yml`. The workflow checks out the **exact pinned source commit** above, validates all source tests, renders desktop/mobile routes in real Chrome and only then publishes `source/site/` through GitHub Pages. A manual dispatch can optionally supply an alternative `source_ref`; no manual override is used by the standard push deployment.
