@@ -21,6 +21,17 @@ The root portfolio still uses validated source commit `7c554849b3a5b7b6736c01d88
 
 Before Pages upload, the workflow tests both sources, runs Chrome QA (desktop/mobile) and checks the nested public URL path and asset integrity. Preview HTML is marked `noindex,nofollow`; the URL is publicly reachable and should not contain private information.
 
+## Preview — PR #33 (stacked Video/IMC / Paid / Lifecycle)
+
+A new isolated preview of [source PR #33](https://github.com/ptevsoh-alt/Enola-data/pull/33), stacked on source PR #32, is available for content review:
+
+- [Video Projects: Brand / IMC / Paid / Lifecycle](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/creative/video-projects)
+- [M3 Campaign: reciprocal creative adaptation](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/gtm/campaign-architecture)
+- [Brand PR: same inherited PR #32 version](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/brand/pr-project)
+- [Full standalone review portfolio](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/)
+
+Pinned preview commit: `7172e68908025e304c76f589f7f6576dccd20664`. The public root remains at `7c554849b3a5b7b6736c01d885497adba407187b`, and the separate PR #32 preview remains under `/preview/pr32/`. This deploy does not merge source PR #32 or PR #33. Pages previews are marked `noindex,nofollow` and require no login, but are publicly accessible.
+
 ## Deployment
 
 Pushes to this repository's `main` run `.github/workflows/deploy-preview.yml`. The workflow checks out the **exact pinned source commit** above, validates all source tests, renders desktop/mobile routes in real Chrome and only then publishes `source/site/` through GitHub Pages. A manual dispatch can optionally supply an alternative `source_ref`; no manual override is used by the standard push deployment.
