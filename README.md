@@ -15,3 +15,7 @@ Open **Actions → Deploy portfolio preview → Run workflow** and provide a sou
 ## Public preview safety
 
 The preview is public. Do not put private, confidential, credential, or non-consented personal information in the source site's public assets.
+
+## Portfolio content revisions
+
+`portfolio.patch` applies the editorial changes to the pinned source checkout. For a local preview, run `git apply /absolute/path/to/portfolio.patch` in that checkout, run `npm ci` and `npm test`, then run `npm run preview`. The Pages workflow applies the same patch before validation.
