@@ -5,8 +5,9 @@ This repository hosts an isolated GitHub Pages preview of the portfolio website 
 - Preview site: https://ptevsoh-alt.github.io/Enola-data-Portfolio/
 - Independent review room: https://ptevsoh-alt.github.io/Enola-data-Portfolio/review/
 - Source repository: https://github.com/ptevsoh-alt/Enola-data
-- Source ref currently pinned (PR #27 removed keyword-selection displays and refined editorial copy; PR #20-restored base): `aa43194e6b125a8d6dab66a62ef73afca4a95ad9`
-- This preview repository is separate from the source repository. The source repository and its `main` branch are not modified by this deployment.
+- Source ref currently pinned (PR #28, JD-integrated portfolio, desktop/mobile/content QA approved on 2026-11-25): `e9f7601466f31b383a62e446c94edb1bb3c82d3a`
+- This public site is deployed from the exact pinned source commit. The source repository and its `main` branch are not modified by this deployment.
+- Release source: [PR #28](https://github.com/ptevsoh-alt/Enola-data/pull/28) (independent validated branch); [visual and content acceptance](https://github.com/ptevsoh-alt/Enola-data/blob/e9f7601466f31b383a62e446c94edb1bb3c82d3a/qa/PORTFOLIO-PR28-VISUAL-AND-CONTENT-QA-20261125.md).
 
 ## Update the preview
 
