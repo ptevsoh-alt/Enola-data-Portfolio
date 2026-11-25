@@ -5,8 +5,8 @@ This repository publishes the public GitHub Pages portfolio from the validated s
 - Portfolio: https://ptevsoh-alt.github.io/Enola-data-Portfolio/
 - Independent case review: https://ptevsoh-alt.github.io/Enola-data-Portfolio/review/
 - Source: https://github.com/ptevsoh-alt/Enola-data
-- Deployed source commit (merged main on 2026-11-25): `d1caddb076a5ef47d64d6906233c94c42ae28e0f`
-- Consolidated source PRs: [#28](https://github.com/ptevsoh-alt/Enola-data/pull/28), [#29](https://github.com/ptevsoh-alt/Enola-data/pull/29) and [#30](https://github.com/ptevsoh-alt/Enola-data/pull/30)
+- Deployed source commit (merged main on 2026-11-25): `7c554849b3a5b7b6736c01d885497adba407187b`
+- Consolidated source PRs: [#31](https://github.com/ptevsoh-alt/Enola-data/pull/31) (recruiter copy / source CI), [#28](https://github.com/ptevsoh-alt/Enola-data/pull/28), [#29](https://github.com/ptevsoh-alt/Enola-data/pull/29) and [#30](https://github.com/ptevsoh-alt/Enola-data/pull/30)
 - M3 employer review: https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/gtm-positioning-decision
 
 ## Deployment
