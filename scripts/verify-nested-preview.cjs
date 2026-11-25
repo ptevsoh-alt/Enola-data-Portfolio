@@ -32,6 +32,7 @@ const outputScript = path.join(root, "preview-source", "scripts", "site-visual-a
 let script = fs.readFileSync(sourceScript, "utf8");
 const patches = [
   ['const site=path.join(__dirname,"../site")', 'const site=path.resolve(__dirname,"../../public")'],
+  ['if(rel==="/")rel="/index.html";', 'if(rel.endsWith("/"))rel+="index.html";'],
   ['"http://127.0.0.1:"+port+"/#/"+route', '"http://127.0.0.1:"+port+"/preview/pr32/#/"+route']
 ];
 for (const [before, after] of patches) {
