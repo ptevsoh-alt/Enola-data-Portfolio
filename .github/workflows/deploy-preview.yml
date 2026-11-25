@@ -37,6 +37,10 @@ jobs:
           path: source
           persist-credentials: false
 
+      - name: Apply portfolio content revisions
+        working-directory: source
+        run: git apply --check ../portfolio.patch && git apply ../portfolio.patch
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
