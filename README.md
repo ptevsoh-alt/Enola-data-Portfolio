@@ -40,7 +40,7 @@ This isolated review is based on [source PR #37](https://github.com/ptevsoh-alt/
 - [M3 Brand / PMM product positioning and campaign roles](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/#/case/gtm/gtm-positioning-decision)
 - [Complete PR #37 review](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/)
 
-Pinned source commit: `0f9f705b1a4198a22e8c380376848e208b387b91`. The [Growth Knowledge Loop Registry](https://github.com/ptevsoh-alt/enola-marketing-skills/blob/main/2026-07-22_%E5%B8%82%E5%9C%BA-skill/references/10-growth-knowledge-loop-registry.md) is the evidence/status model. The page presents a *candidate decision example*, not unverified M3 sales/advertising results, and does not publish private R8 KV materials.
+Pinned source commit: `5213c2a21578186ceba70079fde1175504a07107`. The [Growth Knowledge Loop Registry](https://github.com/ptevsoh-alt/enola-marketing-skills/blob/main/2026-07-22_%E5%B8%82%E5%9C%BA-skill/references/10-growth-knowledge-loop-registry.md) is the evidence/status model. The page presents a *candidate decision example*, not unverified M3 sales/advertising results, and does not publish private R8 KV materials.
 
 The approved public root is unchanged and still pinned at `7c554849b3a5b7b6736c01d885497adba407187b`; `/preview/pr32/` and `/preview/pr33/` remain available. The source PR stays Draft, previews use `noindex,nofollow` and independently run desktop/mobile Chrome and nested route QA before Pages deploy.
 
