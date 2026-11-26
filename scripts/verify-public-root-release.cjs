@@ -15,7 +15,9 @@ const index=fs.readFileSync(path.join(out,"index.html"),"utf8");
 const projects=fs.readFileSync(path.join(out,"projects.js"),"utf8");
 const growth=fs.readFileSync(path.join(out,"growth.js"),"utf8");
 const review=fs.readFileSync(path.join(out,"review/index.html"),"utf8");
-must(index.includes("projects.js?v=20261126knowledge8"),"Final release cache key is not present");
+must(index.includes("projects.js?v=20261126textprivacy2"),"Final brand-text-anonymization cache key is not present");
+must(!/Power Every Move/i.test(projects),"Original brand slogan leaked into public text");
+must(projects.includes('src="assets/projects/pr-home-scene.webp"') && projects.includes('loading="eager" fetchpriority="high"'),"Original PR image not prioritized for display");
 must(!/name=["']robots["'][^>]*noindex/i.test(index),"Public production root cannot be noindex");
 for(const id of ['id="launch-knowledge-loop"','id="m3-knowledge-loop"','id="gtm-positioning-decision"','id="pr-strategy-overview"','id="video-brand-positioning"']){
   must(projects.includes(id),"Merged final case is missing: "+id);

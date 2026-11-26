@@ -14,12 +14,12 @@ The **official portfolio** at [ptevsoh-alt.github.io/Enola-data-Portfolio](https
 
 ## Current production release — 26 November 2026
 
-- **Approved source `main` commit:** `84fc8f303eaf373d8310df2d89d2f46979313841`.
-- Current content privacy revision: [PR #39](https://github.com/ptevsoh-alt/Enola-data/pull/39), validated with Chrome desktop/mobile and public-content privacy gate. It anonymizes the remaining named employer, corrects a misidentified visual, and preserves the video case and original TVC links. The 11 projects and 36 metrics are unchanged.
+- **Approved source `main` commit:** `0ce450daf773cdbefe57c7a548ff3ef086dcc727`.
+- Brand wording-only anonymization: [source PR #40](https://github.com/ptevsoh-alt/Enola-data/pull/40). The PR photo remains the original file and loads eagerly on deep links. All original KV, PR, exhibition and video binaries are unchanged; 11 cases / 36 metrics are preserved.\n- Current content privacy revision: [PR #39](https://github.com/ptevsoh-alt/Enola-data/pull/39), validated with Chrome desktop/mobile and public-content privacy gate. It anonymizes the remaining named employer, corrects a misidentified visual, and preserves the video case and original TVC links. The 11 projects and 36 metrics are unchanged.
 - Initial complete-root source release: [PR #37](https://github.com/ptevsoh-alt/Enola-data/pull/37), including the earlier work from Brand PR [#32](https://github.com/ptevsoh-alt/Enola-data/pull/32), Video/IMC [#33](https://github.com/ptevsoh-alt/Enola-data/pull/33), and the ultimately revised M3 strategy [#36](https://github.com/ptevsoh-alt/Enola-data/pull/36).
 - Source PR #37 **removes** the unauthenticated M3 Campaign KV chapter, does **not** publish private R8 KV files, and replaces the fixed D+7/D+30 framework with the evidence-led Knowledge Loop. No invented sales, CPA/ROAS or validated learnings.
 - The public root uses the **full final version**, not an old isolated preview. All public root files are copied from pinned source `site/` without modification. Historical review snapshots are **not republished**; their old entry URLs now contain noindex redirect stubs to the current root.
-- Previous production source commit, for rollback/reference: `e604a382db8771537bd06fb19964f99422896db5`.
+- Previous production source commit, for rollback/reference: `84fc8f303eaf373d8310df2d89d2f46979313841`.
 - Previous display repository `main` before the switch: `d9408810744f008f3fe48788ae3ca4c0b9acb5a8`. Any rollback requires a fresh gated deployment; it is not automatic.
 
 ## Historical review preview retirement
