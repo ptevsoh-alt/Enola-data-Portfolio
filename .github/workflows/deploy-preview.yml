@@ -1,4 +1,4 @@
-name: Deploy portfolio preview
+name: Deploy full public portfolio
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
         description: "Source branch, tag, or commit SHA from ptevsoh-alt/Enola-data"
         required: false
         type: string
-        default: "7c554849b3a5b7b6736c01d885497adba407187b"
+        default: "e604a382db8771537bd06fb19964f99422896db5"
 
 # GitHub Pages project site is served from the repository-name path:
 # https://ptevsoh-alt.github.io/Enola-data-Portfolio/
@@ -33,7 +33,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ptevsoh-alt/Enola-data
-          ref: ${{ inputs.source_ref || '7c554849b3a5b7b6736c01d885497adba407187b' }}
+          ref: ${{ inputs.source_ref || 'e604a382db8771537bd06fb19964f99422896db5' }}
           path: source
           persist-credentials: false
 
@@ -68,7 +68,7 @@ jobs:
           cache: npm
           cache-dependency-path: source/package-lock.json
 
-      - name: Validate source and public site
+      - name: Validate final merged source and public site
         working-directory: source
         run: |
           npm ci
@@ -113,7 +113,7 @@ jobs:
           sudo apt-get install -y -qq fonts-noto-cjk
           fc-cache -f
 
-      - name: Render portfolio in real Chrome (desktop/mobile)
+      - name: Render official portfolio in real Chrome (desktop/mobile)
         timeout-minutes: 4
         working-directory: source
         run: |
@@ -141,7 +141,7 @@ jobs:
           node scripts/site-visual-audit.cjs > /tmp/pr37-standalone.log 2>&1 || { tail -n 100 /tmp/pr37-standalone.log; exit 1; }
           grep 'VISUAL_QA_RESULT=' /tmp/pr37-standalone.log | tail -n 1
 
-      - name: Assemble isolated preview under /preview/pr32/
+      - name: Assemble official portfolio root and historical preview paths
         run: |
           mkdir -p public/preview/pr32/
           cp -a source/site/. public/
@@ -224,6 +224,10 @@ jobs:
           path: learning-source/qa/live-visual-audit.json
           if-no-files-found: warn
 
+      - name: Gate final production root content before release
+        run: |
+          node scripts/verify-public-root-release.cjs
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -237,6 +241,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
 
-      - name: Deploy isolated portfolio preview
+      - name: Deploy production portfolio root and retained previews
         id: deployment
         uses: actions/deploy-pages@v4
