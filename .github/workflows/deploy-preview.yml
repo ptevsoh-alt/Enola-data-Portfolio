@@ -53,6 +53,14 @@ jobs:
           path: video-source
           persist-credentials: false
 
+      - name: Checkout stacked PR #36 M3 KV/PMM/Knowledge Loop source
+        uses: actions/checkout@v4
+        with:
+          repository: ptevsoh-alt/Enola-data
+          ref: 63105a73e84581cb09a410828e9761d2cd52e07a
+          path: m3-source
+          persist-credentials: false
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -87,6 +95,18 @@ jobs:
           test -f site/review/index.html
           test -f site/.nojekyll
 
+      - name: Validate PR #36 M3 source and private-asset boundary
+        working-directory: m3-source
+        run: |
+          npm ci
+          npm test
+          test -f site/index.html
+          test -f site/review/index.html
+          test -f site/.nojekyll
+          test ! -e site/assets/projects/M3_KV_16x9.png
+          test ! -e site/assets/projects/M3_KV_4x5.png
+          test ! -e site/assets/projects/M3_KV_9x16.png
+
       - name: Install CJK fonts for accurate Chinese layout validation
         run: |
           sudo apt-get update -qq
@@ -114,6 +134,13 @@ jobs:
           node scripts/site-visual-audit.cjs > /tmp/pr33-standalone.log 2>&1 || { tail -n 80 /tmp/pr33-standalone.log; exit 1; }
           grep 'VISUAL_QA_RESULT=' /tmp/pr33-standalone.log | tail -n 1
 
+      - name: Render PR #36 M3 truth/Knowledge Loop standalone in Chrome
+        timeout-minutes: 4
+        working-directory: m3-source
+        run: |
+          node scripts/site-visual-audit.cjs > /tmp/pr36-standalone.log 2>&1 || { tail -n 100 /tmp/pr36-standalone.log; exit 1; }
+          grep 'VISUAL_QA_RESULT=' /tmp/pr36-standalone.log | tail -n 1
+
       - name: Assemble isolated preview under /preview/pr32/
         run: |
           mkdir -p public/preview/pr32/
@@ -121,9 +148,11 @@ jobs:
           cp -a preview-source/site/. public/preview/pr32/
           mkdir -p public/preview/pr33/
           cp -a video-source/site/. public/preview/pr33/
+          mkdir -p public/preview/pr36/
+          cp -a m3-source/site/. public/preview/pr36/
           python3 - <<'PY'
           from pathlib import Path
-          for preview in ['pr32', 'pr33']:
+          for preview in ['pr32', 'pr33', 'pr36']:
               for rel in ['index.html', 'review/index.html']:
                   p = Path('public/preview') / preview / rel
                   t = p.read_text(encoding='utf-8')
@@ -138,6 +167,9 @@ jobs:
           test -f public/preview/pr33/.nojekyll
           test -f public/preview/pr33/assets/favicon.svg
           test -f public/preview/pr33/assets/video/creator-staircase-7s.mp4
+          test -f public/preview/pr36/.nojekyll
+          test -f public/preview/pr36/assets/projects/m3-yellow-main.webp
+          test ! -e public/preview/pr36/assets/projects/M3_KV_16x9.png
 
       - name: Validate production root and nested PR #32 preview in Chrome
         timeout-minutes: 4
@@ -152,6 +184,13 @@ jobs:
           node scripts/verify-nested-video-preview.cjs
           node video-source/scripts/site-visual-audit-nested.cjs > /tmp/pr33-nested.log 2>&1 || { tail -n 80 /tmp/pr33-nested.log; exit 1; }
           grep 'VISUAL_QA_RESULT=' /tmp/pr33-nested.log | tail -n 1
+
+      - name: Validate PR #36 M3 strategy preview nested route in real Chrome
+        timeout-minutes: 4
+        run: |
+          node scripts/verify-nested-m3-preview.cjs
+          node m3-source/scripts/site-visual-audit-nested.cjs > /tmp/pr36-nested.log 2>&1 || { tail -n 100 /tmp/pr36-nested.log; exit 1; }
+          grep 'VISUAL_QA_RESULT=' /tmp/pr36-nested.log | tail -n 1
 
       - name: Archive visual QA metrics
         if: always()
@@ -175,6 +214,14 @@ jobs:
         with:
           name: pr33-nested-video-qa
           path: video-source/qa/live-visual-audit.json
+          if-no-files-found: warn
+
+      - name: Archive PR #36 nested M3 truth visual QA
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr36-m3-truth-knowledge-qa
+          path: m3-source/qa/live-visual-audit.json
           if-no-files-found: warn
 
       - name: Upload GitHub Pages artifact
