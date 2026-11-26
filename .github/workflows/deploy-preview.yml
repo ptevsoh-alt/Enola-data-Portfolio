@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: ptevsoh-alt/Enola-data
-          ref: 0f9f705b1a4198a22e8c380376848e208b387b91
+          ref: 5213c2a21578186ceba70079fde1175504a07107
           path: learning-source
           persist-credentials: false
 
