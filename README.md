@@ -1,53 +1,40 @@
 # Enola Data — Public Portfolio
 
-This repository publishes the public GitHub Pages portfolio from the validated source in [ptevsoh-alt/Enola-data](https://github.com/ptevsoh-alt/Enola-data).
+The **official portfolio** at [ptevsoh-alt.github.io/Enola-data-Portfolio](https://ptevsoh-alt.github.io/Enola-data-Portfolio/) is published from the validated `main` source of [ptevsoh-alt/Enola-data](https://github.com/ptevsoh-alt/Enola-data), pinned to the exact release commit.
 
-- Portfolio: https://ptevsoh-alt.github.io/Enola-data-Portfolio/
-- Independent case review: https://ptevsoh-alt.github.io/Enola-data-Portfolio/review/
-- Source: https://github.com/ptevsoh-alt/Enola-data
-- Deployed source commit (merged main on 2026-11-25): `7c554849b3a5b7b6736c01d885497adba407187b`
-- Consolidated source PRs: [#31](https://github.com/ptevsoh-alt/Enola-data/pull/31) (recruiter copy / source CI), [#28](https://github.com/ptevsoh-alt/Enola-data/pull/28), [#29](https://github.com/ptevsoh-alt/Enola-data/pull/29) and [#30](https://github.com/ptevsoh-alt/Enola-data/pull/30)
-- M3 employer review: https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/gtm-positioning-decision
+## Official recruiter-facing entry points
 
-## Public review preview — PR #32 (not merged)
+- [Portfolio home](https://ptevsoh-alt.github.io/Enola-data-Portfolio/)
+- [Brand positioning and PMM — M3](https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/gtm-positioning-decision)
+- [Campaign strategy and cross-channel execution](https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/campaign-architecture)
+- [Brand PR and partnerships](https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/brand/pr-project)
+- [Brand / video / paid-creative / lifecycle projects](https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/creative/video-projects)
+- [M3 Knowledge Loop review](https://ptevsoh-alt.github.io/Enola-data-Portfolio/#/case/gtm/launch-knowledge-loop)
+- [Recruiter reading view](https://ptevsoh-alt.github.io/Enola-data-Portfolio/review/)
 
-A separate, **noindex** review copy of [Brand PR / Campaign creative and management PR #32](https://github.com/ptevsoh-alt/Enola-data/pull/32) is available at:
+## Production release — 26 November 2026
 
-- [Preview portfolio home](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/)
-- [Brand PR / Partnerships case](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/#/case/brand/pr-project)
-- [Campaign Creative Adaptation / Management](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/#/case/gtm/campaign-architecture)
+- **Approved source `main` commit:** `e604a382db8771537bd06fb19964f99422896db5`.
+- Source release: [PR #37](https://github.com/ptevsoh-alt/Enola-data/pull/37), including the earlier work from Brand PR [#32](https://github.com/ptevsoh-alt/Enola-data/pull/32), Video/IMC [#33](https://github.com/ptevsoh-alt/Enola-data/pull/33), and the ultimately revised M3 strategy [#36](https://github.com/ptevsoh-alt/Enola-data/pull/36).
+- Source PR #37 **removes** the unauthenticated M3 Campaign KV chapter, does **not** publish private R8 KV files, and replaces the fixed D+7/D+30 framework with the evidence-led Knowledge Loop. No invented sales, CPA/ROAS or validated learnings.
+- The public root uses the **full final version**, not an old isolated preview. All public root files are copied from the pinned source `site/` without modification; only historical review snapshots receive `noindex,nofollow` meta tags.
+- Previous production source commit, for rollback/reference: `7c554849b3a5b7b6736c01d885497adba407187b`.
+- Previous display repository `main` before the switch: `d9408810744f008f3fe48788ae3ca4c0b9acb5a8`. Any rollback requires a fresh gated deployment; it is not automatic.
 
-The root portfolio still uses validated source commit `7c554849b3a5b7b6736c01d885497adba407187b`; the review copy is built from PR #32 commit `4f920656c4edfa37c8ddc415624e082831d8ec51`. Both are copied independently into one Pages artifact, with the preview assets and routes kept under `/preview/pr32/`. Passing CI and deployment do **not** merge the source Draft PR.
+## Historical noindex review snapshots
 
-Before Pages upload, the workflow tests both sources, runs Chrome QA (desktop/mobile) and checks the nested public URL path and asset integrity. Preview HTML is marked `noindex,nofollow`; the URL is publicly reachable and should not contain private information.
+These remain for editorial comparison, but the official site URL above is the sole up-to-date portfolio:
 
-## Preview — PR #33 (stacked Video/IMC / Paid / Lifecycle)
+- [Brand / PR review — PR #32](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr32/)
+- [Video / IMC review — PR #33](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/)
+- [Final Knowledge Loop review — PR #37](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/)
 
-A new isolated preview of [source PR #33](https://github.com/ptevsoh-alt/Enola-data/pull/33), stacked on source PR #32, is available for content review:
+The retired PR #36 KV/D+7/D+30 preview is deliberately **not published** in the release artifact.
 
-- [Video Projects: Brand / IMC / Paid / Lifecycle](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/creative/video-projects)
-- [M3 Campaign: reciprocal creative adaptation](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/gtm/campaign-architecture)
-- [Brand PR: same inherited PR #32 version](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/#/case/brand/pr-project)
-- [Full standalone review portfolio](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr33/)
+## Deployment and verification
 
-Pinned preview commit: `7172e68908025e304c76f589f7f6576dccd20664`. The public root remains at `7c554849b3a5b7b6736c01d885497adba407187b`, and the separate PR #32 preview remains under `/preview/pr32/`. This deploy does not merge source PR #32 or PR #33. Pages previews are marked `noindex,nofollow` and require no login, but are publicly accessible.
+Pushes to the display repository's `main` run [`.github/workflows/deploy-preview.yml`](.github/workflows/deploy-preview.yml). The workflow checks out the **exact pinned source SHA**, runs `npm ci && npm test`, validates responsive pages in real Chrome (desktop 1440px / mobile 390px), checks historic preview deep links, stages `source/site/` at the root of the GitHub Pages artifact and runs `scripts/verify-public-root-release.cjs` before deployment. Deployment succeeds only after all validation jobs pass.
 
-## Preview — PR #37 (M3 / Brand PMM / Knowledge Loop only)
+A manual workflow dispatch may override `source_ref`; the normal push deployment always uses the pinned production SHA. Source merges **do not** silently change the live site: the displayed source SHA is managed and reviewed in this repository.
 
-This isolated review is based on [source PR #37](https://github.com/ptevsoh-alt/Enola-data/pull/37), stacked on source PR #36 (which itself includes PR #33 and #32). It **removes the M3 KV chapter entirely**, and **removes the D+7 / D+30 fixed review template** across the case, summaries and review links. The archived PR #36 KV preview is intentionally **not republished**.
-
-- [M3 Knowledge Loop — evidence, diagnosis and next marketing decisions](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/#/case/gtm/launch-knowledge-loop)
-- [M3 Brand / PMM product positioning and campaign roles](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/#/case/gtm/gtm-positioning-decision)
-- [Complete PR #37 review](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/)
-
-Pinned source commit: `5213c2a21578186ceba70079fde1175504a07107`. The [Growth Knowledge Loop Registry](https://github.com/ptevsoh-alt/enola-marketing-skills/blob/main/2026-07-22_%E5%B8%82%E5%9C%BA-skill/references/10-growth-knowledge-loop-registry.md) is the evidence/status model. The page presents a *candidate decision example*, not unverified M3 sales/advertising results, and does not publish private R8 KV materials.
-
-The approved public root is unchanged and still pinned at `7c554849b3a5b7b6736c01d885497adba407187b`; `/preview/pr32/` and `/preview/pr33/` remain available. The source PR stays Draft, previews use `noindex,nofollow` and independently run desktop/mobile Chrome and nested route QA before Pages deploy.
-
-## Deployment
-
-Pushes to this repository's `main` run `.github/workflows/deploy-preview.yml`. The workflow checks out the **exact pinned source commit** above, validates all source tests, renders desktop/mobile routes in real Chrome and only then publishes `source/site/` through GitHub Pages. A manual dispatch can optionally supply an alternative `source_ref`; no manual override is used by the standard push deployment.
-
-## Integrity
-
-The portfolio source `main` and public deployment repository are distinct. A source merge does not silently change the public site; publishing requires updating this exact source ref. Private material, credentials and non-consented personal information must never be added to the public source artifacts.
+Private source materials, credentials, non-consented personal data and unapproved creative assets must never be copied into the public site.
