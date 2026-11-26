@@ -3,6 +3,8 @@ name: Deploy full public portfolio
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
     inputs:
       source_ref:
@@ -104,12 +106,14 @@ jobs:
           node scripts/verify-public-root-release.cjs
 
       - name: Upload GitHub Pages artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public/
 
   deploy:
     needs: validate
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
