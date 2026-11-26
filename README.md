@@ -32,18 +32,17 @@ A new isolated preview of [source PR #33](https://github.com/ptevsoh-alt/Enola-d
 
 Pinned preview commit: `7172e68908025e304c76f589f7f6576dccd20664`. The public root remains at `7c554849b3a5b7b6736c01d885497adba407187b`, and the separate PR #32 preview remains under `/preview/pr32/`. This deploy does not merge source PR #32 or PR #33. Pages previews are marked `noindex,nofollow` and require no login, but are publicly accessible.
 
-## Preview — PR #36 (M3 KV / Brand PMM / Knowledge Loop)
+## Preview — PR #37 (M3 / Brand PMM / Knowledge Loop only)
 
-A separate review version of [source PR #36](https://github.com/ptevsoh-alt/Enola-data/pull/36), stacked on source PR #33, corrects the inaccurate CSS-generated KV composites and adds evidence-led D+7 / D+30 learning:
+This isolated review is based on [source PR #37](https://github.com/ptevsoh-alt/Enola-data/pull/37), stacked on source PR #36 (which itself includes PR #33 and #32). It **removes the M3 KV chapter entirely**, and **removes the D+7 / D+30 fixed review template** across the case, summaries and review links. The archived PR #36 KV preview is intentionally **not republished**.
 
-- [M3 visual strategy and campaign channel adaptation](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr36/#/case/gtm/m3-campaign-kv)
-- [D+7 / D+30 marketing data and Knowledge Loop](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr36/#/case/gtm/launch-d7-d30)
-- [M3 GTM / PMM and integrated campaign](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr36/#/case/gtm/campaign-architecture)
-- [Complete isolated PR #36 review](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr36/)
+- [M3 Knowledge Loop — evidence, diagnosis and next marketing decisions](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/#/case/gtm/launch-knowledge-loop)
+- [M3 Brand / PMM product positioning and campaign roles](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/#/case/gtm/gtm-positioning-decision)
+- [Complete PR #37 review](https://ptevsoh-alt.github.io/Enola-data-Portfolio/preview/pr37/)
 
-Pinned source commit: `63105a73e84581cb09a410828e9761d2cd52e07a`. This review preview **does not** publish the private R8 KV source PNGs found in a non-shared Drive folder; it displays only already-public product visuals and truthful content/planning roles. The genuine R8 16:9 / 4:5 / 9:16 files were separately delivered to the owner as an offline review package, requiring product-truth, release-status and publication-rights confirmation before public use.
+Pinned source commit: `0f9f705b1a4198a22e8c380376848e208b387b91`. The [Growth Knowledge Loop Registry](https://github.com/ptevsoh-alt/enola-marketing-skills/blob/main/2026-07-22_%E5%B8%82%E5%9C%BA-skill/references/10-growth-knowledge-loop-registry.md) is the evidence/status model. The page presents a *candidate decision example*, not unverified M3 sales/advertising results, and does not publish private R8 KV materials.
 
-The official root remains pinned at `7c554849b3a5b7b6736c01d885497adba407187b`; the earlier `/preview/pr32/` and `/preview/pr33/` versions remain intact. This preview is `noindex,nofollow` and does not merge any source Draft PR. Real Chrome validates desktop and mobile and checks the private-media boundary before Pages deployment.
+The approved public root is unchanged and still pinned at `7c554849b3a5b7b6736c01d885497adba407187b`; `/preview/pr32/` and `/preview/pr33/` remain available. The source PR stays Draft, previews use `noindex,nofollow` and independently run desktop/mobile Chrome and nested route QA before Pages deploy.
 
 ## Deployment
 
